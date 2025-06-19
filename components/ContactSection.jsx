@@ -84,7 +84,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-br from-blue-50 to-purple-50"
+      className="py-16 md:py-24 lg:py-32 bg-gradient-to-br from-blue-50 to-purple-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -92,12 +92,12 @@ const ContactSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-16 md:mb-20 lg:mb-24"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 md:mb-8">
             Get In <span className="text-blue-600">Touch</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Ready to start your MBBS journey abroad? Contact our expert
             counselors for personalized guidance and free consultation. We're
             here to help you every step of the way.

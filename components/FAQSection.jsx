@@ -76,14 +76,14 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 md:py-24 lg:py-32 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-16 md:mb-20 lg:mb-24"
         >
           <div className="flex justify-center mb-6">
             <div className="bg-blue-100 p-4 rounded-full">

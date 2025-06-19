@@ -45,7 +45,7 @@ const WhatsAppButton = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50">
       {/* Tooltip */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8, y: 10 }}
@@ -55,7 +55,7 @@ const WhatsAppButton = () => {
           y: showTooltip ? 0 : 10,
         }}
         transition={{ duration: 0.3 }}
-        className="absolute bottom-16 right-0 mb-2 mr-2"
+        className="absolute bottom-14 md:bottom-16 right-0 mb-2 mr-2"
       >
         <div className="bg-white rounded-lg shadow-lg p-3 border border-gray-200 relative max-w-xs">
           <button
@@ -90,10 +90,10 @@ const WhatsAppButton = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={handleWhatsAppClick}
-        className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
+        className="bg-green-500 hover:bg-green-600 text-white p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <WhatsAppIcon className="w-8 h-8 relative z-10" />
+        <WhatsAppIcon className="w-6 h-6 md:w-8 md:h-8 relative z-10" />
 
         {/* Pulse animation */}
         <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-75"></div>

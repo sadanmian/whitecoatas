@@ -151,19 +151,19 @@ const UniversitiesSection = () => {
       : universities.filter((uni) => uni.country === selectedCountry);
 
   return (
-    <section id="universities" className="py-20 bg-gray-50">
+    <section id="universities" className="py-16 md:py-24 lg:py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-16 md:mb-20 lg:mb-24"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 md:mb-8">
             Top <span className="text-blue-600">Universities</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10 md:mb-12 leading-relaxed">
             Partner with prestigious medical universities worldwide. All our
             universities are NMC and WHO approved with excellent academic
             standards.
@@ -180,7 +180,7 @@ const UniversitiesSection = () => {
               <img
                 src="/images/university-building.jpg"
                 alt="University building representing quality medical education"
-                className="w-full h-[300px] object-cover"
+                className="w-full h-[200px] md:h-[300px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               <div className="absolute bottom-4 left-4 text-white">

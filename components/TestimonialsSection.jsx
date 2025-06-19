@@ -92,19 +92,19 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-900 to-purple-900 text-white overflow-hidden">
+    <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-br from-blue-900 to-purple-900 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-16 md:mb-20 lg:mb-24"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8">
             Student <span className="text-blue-300">Success Stories</span>
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-10 md:mb-12 leading-relaxed">
             Hear from our successful students who are now pursuing their medical
             dreams abroad. Their journey could be your inspiration!
           </p>
@@ -120,7 +120,7 @@ const TestimonialsSection = () => {
               <img
                 src="/images/students-graduation.jpg"
                 alt="Successful medical students at graduation"
-                className="w-full h-[250px] object-cover"
+                className="w-full h-[200px] md:h-[250px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               <div className="absolute bottom-4 left-4 text-white">
