@@ -154,8 +154,8 @@ const ServicesSection = () => {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/images/doctor-with-diploma.jpg"
-                alt="Professional services and support for medical education"
+                src="/images/medical-consultation.jpg"
+                alt="Professional medical consultation and services"
                 className="w-full h-[250px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
