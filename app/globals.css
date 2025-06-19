@@ -159,8 +159,12 @@ html {
 
 /* Background patterns */
 .bg-pattern {
-  background-image: radial-gradient(circle at 20px 80px, #3b82f6 2px, transparent 2px),
-                    radial-gradient(circle at 80px 20px, #8b5cf6 2px, transparent 2px);
+  background-image: radial-gradient(
+      circle at 20px 80px,
+      #3b82f6 2px,
+      transparent 2px
+    ),
+    radial-gradient(circle at 80px 20px, #8b5cf6 2px, transparent 2px);
   background-size: 100px 100px;
   opacity: 0.05;
 }

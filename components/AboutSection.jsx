@@ -1,49 +1,56 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle, Target, Eye, Heart } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { CheckCircle, Target, Eye, Heart } from "lucide-react";
 
 const AboutSection = () => {
   const features = [
     {
       icon: CheckCircle,
       title: "NMC Approved Universities",
-      description: "All our partner universities are approved by National Medical Commission (NMC) and WHO."
+      description:
+        "All our partner universities are approved by National Medical Commission (NMC) and WHO.",
     },
     {
       icon: Target,
       title: "Expert Guidance",
-      description: "Our experienced counselors provide personalized guidance for your medical career abroad."
+      description:
+        "Our experienced counselors provide personalized guidance for your medical career abroad.",
     },
     {
       icon: Eye,
       title: "Transparent Process",
-      description: "Complete transparency in admission process, fees, and documentation requirements."
+      description:
+        "Complete transparency in admission process, fees, and documentation requirements.",
     },
     {
       icon: Heart,
       title: "Student Support",
-      description: "24/7 support for students from application to graduation and beyond."
-    }
+      description:
+        "24/7 support for students from application to graduation and beyond.",
+    },
   ];
 
   const values = [
     {
       title: "Our Mission",
-      description: "To provide affordable, quality medical education opportunities abroad and guide students towards a successful medical career.",
-      icon: "🎯"
+      description:
+        "To provide affordable, quality medical education opportunities abroad and guide students towards a successful medical career.",
+      icon: "🎯",
     },
     {
       title: "Our Vision",
-      description: "To become the most trusted partner for students aspiring to study medicine abroad with complete transparency and support.",
-      icon: "👁️"
+      description:
+        "To become the most trusted partner for students aspiring to study medicine abroad with complete transparency and support.",
+      icon: "👁️",
     },
     {
       title: "Our Values",
-      description: "Integrity, Excellence, Student-First Approach, and Commitment to Quality Education are the pillars of our service.",
-      icon: "💎"
-    }
+      description:
+        "Integrity, Excellence, Student-First Approach, and Commitment to Quality Education are the pillars of our service.",
+      icon: "💎",
+    },
   ];
 
   return (
@@ -60,8 +67,10 @@ const AboutSection = () => {
             About <span className="text-blue-600">WhiteCoatAs</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are committed to making quality medical education accessible and affordable for Indian students. 
-            With over a decade of experience, we have helped thousands of students achieve their dreams of becoming doctors.
+            We are committed to making quality medical education accessible and
+            affordable for Indian students. With over a decade of experience, we
+            have helped thousands of students achieve their dreams of becoming
+            doctors.
           </p>
         </motion.div>
 
@@ -78,10 +87,12 @@ const AboutSection = () => {
                 Why Choose WhiteCoatAs?
               </h3>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                We understand that choosing the right path for your medical education is one of the most important decisions of your life. 
-                That's why we're dedicated to providing you with comprehensive support, from university selection to graduation and beyond.
+                We understand that choosing the right path for your medical
+                education is one of the most important decisions of your life.
+                That's why we're dedicated to providing you with comprehensive
+                support, from university selection to graduation and beyond.
               </p>
-              
+
               <div className="space-y-4">
                 {features.map((feature, index) => (
                   <motion.div
@@ -95,8 +106,12 @@ const AboutSection = () => {
                       <feature.icon className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">{feature.title}</h4>
-                      <p className="text-gray-600 text-sm">{feature.description}</p>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        {feature.title}
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        {feature.description}
+                      </p>
                     </div>
                   </motion.div>
                 ))}
@@ -121,9 +136,13 @@ const AboutSection = () => {
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-4">{value.icon}</span>
-                  <h3 className="text-2xl font-bold text-gray-900">{value.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {value.title}
+                  </h3>
                 </div>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                <p className="text-gray-600 leading-relaxed">
+                  {value.description}
+                </p>
               </motion.div>
             ))}
           </motion.div>
@@ -137,16 +156,36 @@ const AboutSection = () => {
           className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">Our Impact in Numbers</h3>
-            <p className="text-blue-100 text-lg">Building dreams, shaping futures, creating doctors worldwide</p>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+              Our Impact in Numbers
+            </h3>
+            <p className="text-blue-100 text-lg">
+              Building dreams, shaping futures, creating doctors worldwide
+            </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { number: "5000+", label: "Students Placed", sublabel: "Dreams Fulfilled" },
-              { number: "100+", label: "Partner Universities", sublabel: "Global Network" },
-              { number: "15+", label: "Countries", sublabel: "Worldwide Reach" },
-              { number: "98%", label: "Success Rate", sublabel: "Proven Track Record" }
+              {
+                number: "5000+",
+                label: "Students Placed",
+                sublabel: "Dreams Fulfilled",
+              },
+              {
+                number: "100+",
+                label: "Partner Universities",
+                sublabel: "Global Network",
+              },
+              {
+                number: "15+",
+                label: "Countries",
+                sublabel: "Worldwide Reach",
+              },
+              {
+                number: "98%",
+                label: "Success Rate",
+                sublabel: "Proven Track Record",
+              },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -155,7 +194,9 @@ const AboutSection = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</div>
+                <div className="text-4xl md:text-5xl font-bold mb-2">
+                  {stat.number}
+                </div>
                 <div className="text-lg font-semibold mb-1">{stat.label}</div>
                 <div className="text-blue-200 text-sm">{stat.sublabel}</div>
               </motion.div>

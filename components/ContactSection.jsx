@@ -1,42 +1,42 @@
 "use client";
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
   Send,
   MessageCircle,
   User,
-  BookOpen
-} from 'lucide-react';
+  BookOpen,
+} from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    country: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    country: "",
+    message: "",
   });
 
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
   const contactInfo = [
@@ -46,7 +46,7 @@ const ContactSection = () => {
       details: ["+91 98765 43210", "+91 87654 32109"],
       description: "Speak with our counselors",
       color: "text-green-600",
-      bgColor: "bg-green-50"
+      bgColor: "bg-green-50",
     },
     {
       icon: Mail,
@@ -54,7 +54,7 @@ const ContactSection = () => {
       details: ["info@whitecoatas.com", "admissions@whitecoatas.com"],
       description: "Get detailed information",
       color: "text-blue-600",
-      bgColor: "bg-blue-50"
+      bgColor: "bg-blue-50",
     },
     {
       icon: MapPin,
@@ -62,7 +62,7 @@ const ContactSection = () => {
       details: ["123 Education Hub", "New Delhi, India - 110001"],
       description: "Meet us in person",
       color: "text-purple-600",
-      bgColor: "bg-purple-50"
+      bgColor: "bg-purple-50",
     },
     {
       icon: Clock,
@@ -70,19 +70,22 @@ const ContactSection = () => {
       details: ["Mon - Sat: 9:00 AM - 7:00 PM", "Sunday: 10:00 AM - 5:00 PM"],
       description: "We're here to help",
       color: "text-orange-600",
-      bgColor: "bg-orange-50"
-    }
+      bgColor: "bg-orange-50",
+    },
   ];
 
   const whyChooseUs = [
     { icon: User, text: "Expert Counselors" },
     { icon: BookOpen, text: "Free Guidance" },
     { icon: Phone, text: "24/7 Support" },
-    { icon: MessageCircle, text: "Quick Response" }
+    { icon: MessageCircle, text: "Quick Response" },
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-br from-blue-50 to-purple-50"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -95,8 +98,9 @@ const ContactSection = () => {
             Get In <span className="text-blue-600">Touch</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to start your MBBS journey abroad? Contact our expert counselors for personalized guidance 
-            and free consultation. We're here to help you every step of the way.
+            Ready to start your MBBS journey abroad? Contact our expert
+            counselors for personalized guidance and free consultation. We're
+            here to help you every step of the way.
           </p>
         </motion.div>
 
@@ -125,10 +129,17 @@ const ContactSection = () => {
                           <info.icon className={`w-6 h-6 ${info.color}`} />
                         </div>
                         <div className="flex-1">
-                          <h3 className="font-bold text-gray-900 mb-1">{info.title}</h3>
-                          <p className="text-gray-600 text-sm mb-2">{info.description}</p>
+                          <h3 className="font-bold text-gray-900 mb-1">
+                            {info.title}
+                          </h3>
+                          <p className="text-gray-600 text-sm mb-2">
+                            {info.description}
+                          </p>
                           {info.details.map((detail, idx) => (
-                            <p key={idx} className="text-gray-900 font-medium text-sm">
+                            <p
+                              key={idx}
+                              className="text-gray-900 font-medium text-sm"
+                            >
                               {detail}
                             </p>
                           ))}
@@ -147,14 +158,18 @@ const ContactSection = () => {
               transition={{ duration: 0.8 }}
               className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100"
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Why Choose WhiteCoatAs?</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Why Choose WhiteCoatAs?
+              </h3>
               <div className="space-y-3">
                 {whyChooseUs.map((item, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <div className="bg-blue-100 p-2 rounded-lg">
                       <item.icon className="w-4 h-4 text-blue-600" />
                     </div>
-                    <span className="text-gray-700 font-medium">{item.text}</span>
+                    <span className="text-gray-700 font-medium">
+                      {item.text}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -175,8 +190,13 @@ const ContactSection = () => {
                     <Send className="w-6 h-6" />
                   </div>
                   <div>
-                    <CardTitle className="text-2xl">Get Free Consultation</CardTitle>
-                    <p className="text-blue-100 mt-1">Fill out the form and we'll get back to you within 24 hours</p>
+                    <CardTitle className="text-2xl">
+                      Get Free Consultation
+                    </CardTitle>
+                    <p className="text-blue-100 mt-1">
+                      Fill out the form and we'll get back to you within 24
+                      hours
+                    </p>
                   </div>
                 </div>
               </CardHeader>
@@ -267,8 +287,8 @@ const ContactSection = () => {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <Button 
-                      type="submit" 
+                    <Button
+                      type="submit"
                       className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 text-lg font-semibold"
                     >
                       Send Message
@@ -277,10 +297,14 @@ const ContactSection = () => {
                   </motion.div>
 
                   <p className="text-center text-sm text-gray-600">
-                    By submitting this form, you agree to our{' '}
-                    <a href="#" className="text-blue-600 hover:underline">Terms of Service</a>
-                    {' '}and{' '}
-                    <a href="#" className="text-blue-600 hover:underline">Privacy Policy</a>
+                    By submitting this form, you agree to our{" "}
+                    <a href="#" className="text-blue-600 hover:underline">
+                      Terms of Service
+                    </a>{" "}
+                    and{" "}
+                    <a href="#" className="text-blue-600 hover:underline">
+                      Privacy Policy
+                    </a>
                   </p>
                 </form>
               </CardContent>
@@ -299,7 +323,7 @@ const ContactSection = () => {
             Need Immediate Assistance?
           </h3>
           <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-            Our counselors are available to answer your questions right away. 
+            Our counselors are available to answer your questions right away.
             Get instant support via phone or WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -40,18 +40,20 @@ A modern, responsive website for MBBS abroad admission consultancy, built with N
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or pnpm
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd whitecoatas
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -59,6 +61,7 @@ pnpm install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 # or
@@ -104,26 +107,31 @@ whitecoatas/
 ## 🎯 Key Components
 
 ### Header
+
 - Sticky navigation with contact information
 - Mobile-responsive hamburger menu
 - Smooth scrolling navigation links
 
 ### Hero Section
+
 - Animated headline and statistics
 - Call-to-action buttons
 - Background animations
 
 ### Countries Section
+
 - Interactive country cards
 - Cost breakdown information
 - University count per country
 
 ### Universities Section
+
 - Filterable university listings
 - Detailed university information
 - Rating and accreditation badges
 
 ### Contact Features
+
 - Multi-step contact forms
 - WhatsApp floating button
 - Phone and email integration
@@ -131,6 +139,7 @@ whitecoatas/
 ## 🔧 Customization
 
 ### Colors
+
 The website uses a blue-purple color scheme. To customize:
 
 1. Update Tailwind config in `tailwind.config.js`
@@ -138,6 +147,7 @@ The website uses a blue-purple color scheme. To customize:
 3. Update component color classes
 
 ### Content
+
 All content is easily customizable by editing the respective component files:
 
 - University data in `UniversitiesSection.jsx`
@@ -146,7 +156,9 @@ All content is easily customizable by editing the respective component files:
 - Testimonials in `TestimonialsSection.jsx`
 
 ### Contact Information
+
 Update contact details in:
+
 - `Header.jsx`
 - `ContactSection.jsx`
 - `Footer.jsx`
@@ -155,6 +167,7 @@ Update contact details in:
 ## 📱 Responsive Design
 
 The website is fully responsive with breakpoints:
+
 - Mobile: 0-640px
 - Tablet: 641-768px
 - Desktop: 769px+

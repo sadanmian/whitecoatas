@@ -14,15 +14,18 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "WhiteCoatAs - Your Gateway to Global Medical Education",
-  description: "Trusted partner for affordable, quality MBBS abroad. Expert guidance for medical education in Russia, Georgia, Kazakhstan, and more. Start your doctor journey today!",
-  keywords: "MBBS abroad, medical education, study medicine abroad, MBBS in Russia, MBBS in Georgia, medical university, WhiteCoatAs",
+  description:
+    "Trusted partner for affordable, quality MBBS abroad. Expert guidance for medical education in Russia, Georgia, Kazakhstan, and more. Start your doctor journey today!",
+  keywords:
+    "MBBS abroad, medical education, study medicine abroad, MBBS in Russia, MBBS in Georgia, medical university, WhiteCoatAs",
   authors: [{ name: "WhiteCoatAs" }],
   creator: "WhiteCoatAs",
   publisher: "WhiteCoatAs",
   robots: "index, follow",
   openGraph: {
     title: "WhiteCoatAs - Your Gateway to Global Medical Education",
-    description: "Trusted partner for affordable, quality MBBS abroad. Expert guidance for medical education worldwide.",
+    description:
+      "Trusted partner for affordable, quality MBBS abroad. Expert guidance for medical education worldwide.",
     url: "https://whitecoatas.com",
     siteName: "WhiteCoatAs",
     type: "website",
@@ -31,14 +34,15 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "WhiteCoatAs - Your Gateway to Global Medical Education",
-    description: "Trusted partner for affordable, quality MBBS abroad. Expert guidance for medical education worldwide.",
+    description:
+      "Trusted partner for affordable, quality MBBS abroad. Expert guidance for medical education worldwide.",
   },
 };
 
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
-  themeColor: '#2563eb',
+  themeColor: "#2563eb",
 };
 
 export default function RootLayout({ children }) {

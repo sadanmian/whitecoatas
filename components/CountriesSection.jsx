@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { MapPin, DollarSign, Clock, Award } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { MapPin, DollarSign, Clock, Award } from "lucide-react";
 
 const CountriesSection = () => {
   const [selectedCountry, setSelectedCountry] = useState(null);
@@ -17,10 +17,16 @@ const CountriesSection = () => {
       duration: "6 Years",
       tuitionFee: "$3,000-5,000/year",
       livingCost: "$2,000-3,000/year",
-      description: "World-class medical education with English medium instruction",
-      highlights: ["NMC Approved", "High Quality Education", "Affordable Fees", "Winter Climate"],
+      description:
+        "World-class medical education with English medium instruction",
+      highlights: [
+        "NMC Approved",
+        "High Quality Education",
+        "Affordable Fees",
+        "Winter Climate",
+      ],
       universities: 45,
-      color: "from-red-500 to-red-600"
+      color: "from-red-500 to-red-600",
     },
     {
       id: 2,
@@ -30,9 +36,14 @@ const CountriesSection = () => {
       tuitionFee: "$5,000-8,000/year",
       livingCost: "$2,500-3,500/year",
       description: "European standard education with modern infrastructure",
-      highlights: ["EU Standards", "English Medium", "Cultural Diversity", "Beautiful Landscape"],
+      highlights: [
+        "EU Standards",
+        "English Medium",
+        "Cultural Diversity",
+        "Beautiful Landscape",
+      ],
       universities: 12,
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
     },
     {
       id: 3,
@@ -42,9 +53,14 @@ const CountriesSection = () => {
       tuitionFee: "$3,500-5,500/year",
       livingCost: "$1,800-2,800/year",
       description: "Quality medical education with affordable living costs",
-      highlights: ["WHO Approved", "Low Living Cost", "Safe Environment", "Modern Facilities"],
+      highlights: [
+        "WHO Approved",
+        "Low Living Cost",
+        "Safe Environment",
+        "Modern Facilities",
+      ],
       universities: 8,
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
     },
     {
       id: 4,
@@ -54,9 +70,14 @@ const CountriesSection = () => {
       tuitionFee: "$3,000-4,500/year",
       livingCost: "$1,500-2,500/year",
       description: "Budget-friendly medical education with excellent faculty",
-      highlights: ["Very Affordable", "Indian Food Available", "Mountain Beauty", "Friendly Culture"],
+      highlights: [
+        "Very Affordable",
+        "Indian Food Available",
+        "Mountain Beauty",
+        "Friendly Culture",
+      ],
       universities: 6,
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
     },
     {
       id: 5,
@@ -66,9 +87,14 @@ const CountriesSection = () => {
       tuitionFee: "$3,200-4,800/year",
       livingCost: "$1,800-2,800/year",
       description: "Growing medical education hub with modern facilities",
-      highlights: ["Emerging Destination", "Cost Effective", "Good Infrastructure", "Cultural Similarity"],
+      highlights: [
+        "Emerging Destination",
+        "Cost Effective",
+        "Good Infrastructure",
+        "Cultural Similarity",
+      ],
       universities: 10,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     },
     {
       id: 6,
@@ -77,11 +103,17 @@ const CountriesSection = () => {
       duration: "6 Years",
       tuitionFee: "$4,000-6,000/year",
       livingCost: "$2,000-3,000/year",
-      description: "European medical education with excellent clinical exposure",
-      highlights: ["European Standards", "Clinical Exposure", "Research Opportunities", "Multicultural"],
+      description:
+        "European medical education with excellent clinical exposure",
+      highlights: [
+        "European Standards",
+        "Clinical Exposure",
+        "Research Opportunities",
+        "Multicultural",
+      ],
       universities: 25,
-      color: "from-blue-600 to-purple-600"
-    }
+      color: "from-blue-600 to-purple-600",
+    },
   ];
 
   return (
@@ -98,8 +130,8 @@ const CountriesSection = () => {
             Study <span className="text-blue-600">Destinations</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore top destinations for MBBS abroad. Each country offers unique advantages 
-            and world-class medical education at affordable costs.
+            Explore top destinations for MBBS abroad. Each country offers unique
+            advantages and world-class medical education at affordable costs.
           </p>
         </motion.div>
 
@@ -117,14 +149,19 @@ const CountriesSection = () => {
             >
               <Card className="h-full bg-white hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
                 {/* Country Header */}
-                <div className={`bg-gradient-to-r ${country.color} p-6 text-white relative overflow-hidden`}>
+                <div
+                  className={`bg-gradient-to-r ${country.color} p-6 text-white relative overflow-hidden`}
+                >
                   <div className="absolute top-0 right-0 opacity-10 text-6xl">
                     {country.flag}
                   </div>
                   <div className="relative z-10">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-4xl">{country.flag}</span>
-                      <Badge variant="secondary" className="bg-white/20 text-white">
+                      <Badge
+                        variant="secondary"
+                        className="bg-white/20 text-white"
+                      >
                         {country.universities} Universities
                       </Badge>
                     </div>
@@ -138,15 +175,21 @@ const CountriesSection = () => {
                   <div className="space-y-4 mb-6">
                     <div className="flex items-center space-x-3">
                       <Clock className="w-5 h-5 text-blue-600" />
-                      <span className="text-gray-700">Duration: <strong>{country.duration}</strong></span>
+                      <span className="text-gray-700">
+                        Duration: <strong>{country.duration}</strong>
+                      </span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <DollarSign className="w-5 h-5 text-green-600" />
-                      <span className="text-gray-700">Tuition: <strong>{country.tuitionFee}</strong></span>
+                      <span className="text-gray-700">
+                        Tuition: <strong>{country.tuitionFee}</strong>
+                      </span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <MapPin className="w-5 h-5 text-purple-600" />
-                      <span className="text-gray-700">Living: <strong>{country.livingCost}</strong></span>
+                      <span className="text-gray-700">
+                        Living: <strong>{country.livingCost}</strong>
+                      </span>
                     </div>
                   </div>
 
@@ -158,9 +201,9 @@ const CountriesSection = () => {
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {country.highlights.map((highlight, idx) => (
-                        <Badge 
-                          key={idx} 
-                          variant="outline" 
+                        <Badge
+                          key={idx}
+                          variant="outline"
                           className="text-xs bg-blue-50 text-blue-700 border-blue-200"
                         >
                           {highlight}
@@ -172,7 +215,9 @@ const CountriesSection = () => {
                   {/* Hover Effect */}
                   <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="bg-blue-50 rounded-lg p-3 text-center">
-                      <span className="text-blue-600 font-semibold text-sm">Click to learn more</span>
+                      <span className="text-blue-600 font-semibold text-sm">
+                        Click to learn more
+                      </span>
                     </div>
                   </div>
                 </CardContent>
@@ -193,8 +238,9 @@ const CountriesSection = () => {
               Need Help Choosing the Right Country?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Our expert counselors will help you select the best destination based on your budget, 
-              preferences, and career goals. Get personalized guidance today!
+              Our expert counselors will help you select the best destination
+              based on your budget, preferences, and career goals. Get
+              personalized guidance today!
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}

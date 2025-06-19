@@ -1,52 +1,67 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Facebook, 
-  Twitter, 
-  Instagram, 
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Instagram,
   Linkedin,
   ChevronRight,
-  Heart
-} from 'lucide-react';
+  Heart,
+} from "lucide-react";
 
 const Footer = () => {
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Countries', href: '#countries' },
-    { name: 'Universities', href: '#universities' },
-    { name: 'Services', href: '#services' },
-    { name: 'Contact', href: '#contact' }
+    { name: "Home", href: "#home" },
+    { name: "About Us", href: "#about" },
+    { name: "Countries", href: "#countries" },
+    { name: "Universities", href: "#universities" },
+    { name: "Services", href: "#services" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const countries = [
-    { name: 'MBBS in Russia', href: '#' },
-    { name: 'MBBS in Georgia', href: '#' },
-    { name: 'MBBS in Kazakhstan', href: '#' },
-    { name: 'MBBS in Kyrgyzstan', href: '#' },
-    { name: 'MBBS in Uzbekistan', href: '#' },
-    { name: 'MBBS in Ukraine', href: '#' }
+    { name: "MBBS in Russia", href: "#" },
+    { name: "MBBS in Georgia", href: "#" },
+    { name: "MBBS in Kazakhstan", href: "#" },
+    { name: "MBBS in Kyrgyzstan", href: "#" },
+    { name: "MBBS in Uzbekistan", href: "#" },
+    { name: "MBBS in Ukraine", href: "#" },
   ];
 
   const services = [
-    { name: 'University Selection', href: '#' },
-    { name: 'Visa Assistance', href: '#' },
-    { name: 'Documentation Support', href: '#' },
-    { name: 'Accommodation Help', href: '#' },
-    { name: 'Financial Guidance', href: '#' },
-    { name: '24/7 Student Support', href: '#' }
+    { name: "University Selection", href: "#" },
+    { name: "Visa Assistance", href: "#" },
+    { name: "Documentation Support", href: "#" },
+    { name: "Accommodation Help", href: "#" },
+    { name: "Financial Guidance", href: "#" },
+    { name: "24/7 Student Support", href: "#" },
   ];
 
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: '#', color: 'hover:text-blue-600' },
-    { name: 'Twitter', icon: Twitter, href: '#', color: 'hover:text-blue-400' },
-    { name: 'Instagram', icon: Instagram, href: '#', color: 'hover:text-pink-600' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#', color: 'hover:text-blue-700' }
+    {
+      name: "Facebook",
+      icon: Facebook,
+      href: "#",
+      color: "hover:text-blue-600",
+    },
+    { name: "Twitter", icon: Twitter, href: "#", color: "hover:text-blue-400" },
+    {
+      name: "Instagram",
+      icon: Instagram,
+      href: "#",
+      color: "hover:text-pink-600",
+    },
+    {
+      name: "LinkedIn",
+      icon: Linkedin,
+      href: "#",
+      color: "hover:text-blue-700",
+    },
   ];
 
   return (
@@ -62,10 +77,13 @@ const Footer = () => {
             className="lg:col-span-1"
           >
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-blue-400 mb-4">WhiteCoatAs</h3>
+              <h3 className="text-2xl font-bold text-blue-400 mb-4">
+                WhiteCoatAs
+              </h3>
               <p className="text-gray-300 leading-relaxed mb-6">
-                Your trusted partner for affordable, quality medical education abroad. 
-                We help students achieve their dreams of becoming doctors with expert guidance and complete support.
+                Your trusted partner for affordable, quality medical education
+                abroad. We help students achieve their dreams of becoming
+                doctors with expert guidance and complete support.
               </p>
             </div>
 
@@ -82,7 +100,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400 mt-1" />
                 <span className="text-gray-300">
-                  123 Education Hub<br />
+                  123 Education Hub
+                  <br />
                   New Delhi, India - 110001
                 </span>
               </div>
@@ -184,8 +203,8 @@ const Footer = () => {
           <div className="text-center">
             <h4 className="text-xl font-semibold mb-4">Stay Updated</h4>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Subscribe to our newsletter to get the latest updates on admissions, 
-              scholarships, and study abroad opportunities.
+              Subscribe to our newsletter to get the latest updates on
+              admissions, scholarships, and study abroad opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
@@ -211,19 +230,28 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               <p className="flex items-center">
-                © 2024 WhiteCoatAs. All rights reserved. Made with 
+                © 2024 WhiteCoatAs. All rights reserved. Made with
                 <Heart className="w-4 h-4 mx-1 text-red-500" />
                 for aspiring doctors.
               </p>
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+              >
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+              >
                 Refund Policy
               </a>
             </div>

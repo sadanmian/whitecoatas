@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
 
 const FAQSection = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -12,53 +12,63 @@ const FAQSection = () => {
     {
       id: 1,
       question: "What is the eligibility criteria for MBBS abroad?",
-      answer: "Students must have completed 12th grade with Physics, Chemistry, Biology/Biotechnology and English with minimum 50% marks (40% for reserved categories). NEET qualification is mandatory for Indian students to pursue MBBS abroad."
+      answer:
+        "Students must have completed 12th grade with Physics, Chemistry, Biology/Biotechnology and English with minimum 50% marks (40% for reserved categories). NEET qualification is mandatory for Indian students to pursue MBBS abroad.",
     },
     {
       id: 2,
       question: "Are the universities NMC and WHO approved?",
-      answer: "Yes, all our partner universities are approved by the National Medical Commission (NMC) and World Health Organization (WHO). This ensures that graduates can practice medicine in India after clearing the necessary licensing exams."
+      answer:
+        "Yes, all our partner universities are approved by the National Medical Commission (NMC) and World Health Organization (WHO). This ensures that graduates can practice medicine in India after clearing the necessary licensing exams.",
     },
     {
       id: 3,
       question: "What are the total costs involved?",
-      answer: "The total cost varies by country and university, typically ranging from $25,000 to $50,000 for the entire course. This includes tuition fees, accommodation, food, and other living expenses. We provide detailed cost breakdowns for each destination."
+      answer:
+        "The total cost varies by country and university, typically ranging from $25,000 to $50,000 for the entire course. This includes tuition fees, accommodation, food, and other living expenses. We provide detailed cost breakdowns for each destination.",
     },
     {
       id: 4,
       question: "Is the degree valid in India?",
-      answer: "Yes, degrees from NMC-approved universities are valid in India. Graduates need to clear the Foreign Medical Graduate Examination (FMGE) or National Exit Test (NExT) to practice medicine in India."
+      answer:
+        "Yes, degrees from NMC-approved universities are valid in India. Graduates need to clear the Foreign Medical Graduate Examination (FMGE) or National Exit Test (NExT) to practice medicine in India.",
     },
     {
       id: 5,
       question: "What languages are courses taught in?",
-      answer: "Most universities offer MBBS programs in English medium. Some universities also provide local language support in the initial years to help students adapt better to the local environment."
+      answer:
+        "Most universities offer MBBS programs in English medium. Some universities also provide local language support in the initial years to help students adapt better to the local environment.",
     },
     {
       id: 6,
       question: "How safe is it to study abroad?",
-      answer: "All our partner countries and universities maintain high safety standards. We also provide 24/7 support to students and maintain regular contact with parents. Our local representatives ensure student welfare throughout their stay."
+      answer:
+        "All our partner countries and universities maintain high safety standards. We also provide 24/7 support to students and maintain regular contact with parents. Our local representatives ensure student welfare throughout their stay.",
     },
     {
       id: 7,
       question: "What about accommodation and food?",
-      answer: "We arrange safe and comfortable accommodation in university hostels or approved private accommodations. Most places offer Indian food options, and we help students find familiar cuisines to make their stay comfortable."
+      answer:
+        "We arrange safe and comfortable accommodation in university hostels or approved private accommodations. Most places offer Indian food options, and we help students find familiar cuisines to make their stay comfortable.",
     },
     {
       id: 8,
       question: "How long does the visa process take?",
-      answer: "The visa process typically takes 2-4 weeks depending on the country. We handle the entire visa process and provide guidance for document preparation, application submission, and interview preparation if required."
+      answer:
+        "The visa process typically takes 2-4 weeks depending on the country. We handle the entire visa process and provide guidance for document preparation, application submission, and interview preparation if required.",
     },
     {
       id: 9,
       question: "Can I work part-time while studying?",
-      answer: "Some countries allow international students to work part-time with certain restrictions. We provide complete information about work permissions and opportunities in each destination country."
+      answer:
+        "Some countries allow international students to work part-time with certain restrictions. We provide complete information about work permissions and opportunities in each destination country.",
     },
     {
       id: 10,
       question: "What support do you provide after admission?",
-      answer: "We provide continuous support including pre-departure orientation, airport assistance, accommodation help, local area guidance, academic support, and regular check-ins throughout the course duration."
-    }
+      answer:
+        "We provide continuous support including pre-departure orientation, airport assistance, accommodation help, local area guidance, academic support, and regular check-ins throughout the course duration.",
+    },
   ];
 
   const toggleFAQ = (id) => {
@@ -84,8 +94,9 @@ const FAQSection = () => {
             Frequently Asked <span className="text-blue-600">Questions</span>
           </h2>
           <p className="text-xl text-gray-600">
-            Get answers to the most common questions about studying MBBS abroad. 
-            Can't find what you're looking for? Contact our experts for personalized guidance.
+            Get answers to the most common questions about studying MBBS abroad.
+            Can't find what you're looking for? Contact our experts for
+            personalized guidance.
           </p>
         </motion.div>
 
@@ -117,14 +128,14 @@ const FAQSection = () => {
                       </div>
                     </div>
                   </button>
-                  
+
                   <motion.div
                     initial={false}
-                    animate={{ 
-                      height: openFAQ === faq.id ? 'auto' : 0,
-                      opacity: openFAQ === faq.id ? 1 : 0
+                    animate={{
+                      height: openFAQ === faq.id ? "auto" : 0,
+                      opacity: openFAQ === faq.id ? 1 : 0,
                     }}
-                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
                     <div className="px-6 pb-6">
@@ -152,8 +163,9 @@ const FAQSection = () => {
             Still Have Questions?
           </h3>
           <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-            Our expert counselors are here to help! Get personalized answers to all your questions 
-            about studying MBBS abroad. Book a free consultation today.
+            Our expert counselors are here to help! Get personalized answers to
+            all your questions about studying MBBS abroad. Book a free
+            consultation today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button

@@ -1,91 +1,129 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { 
-  FileText, 
-  GraduationCap, 
-  Plane, 
-  Home, 
-  CreditCard, 
+import React from "react";
+import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  FileText,
+  GraduationCap,
+  Plane,
+  Home,
+  CreditCard,
   Headphones,
   BookOpen,
   Users,
-  CheckCircle
-} from 'lucide-react';
+  CheckCircle,
+} from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
     {
       icon: FileText,
       title: "Documentation Support",
-      description: "Complete assistance with document preparation, verification, and submission for university applications.",
-      features: ["Document Verification", "Application Forms", "Attestation Support", "Translation Services"]
+      description:
+        "Complete assistance with document preparation, verification, and submission for university applications.",
+      features: [
+        "Document Verification",
+        "Application Forms",
+        "Attestation Support",
+        "Translation Services",
+      ],
     },
     {
       icon: GraduationCap,
       title: "University Selection",
-      description: "Expert guidance to choose the right university based on your budget, preferences, and career goals.",
-      features: ["Personalized Counseling", "University Comparison", "Course Details", "Admission Requirements"]
+      description:
+        "Expert guidance to choose the right university based on your budget, preferences, and career goals.",
+      features: [
+        "Personalized Counseling",
+        "University Comparison",
+        "Course Details",
+        "Admission Requirements",
+      ],
     },
     {
       icon: Plane,
       title: "Visa Assistance",
-      description: "End-to-end visa support including application, interview preparation, and documentation.",
-      features: ["Visa Application", "Interview Prep", "Document Checklist", "Embassy Support"]
+      description:
+        "End-to-end visa support including application, interview preparation, and documentation.",
+      features: [
+        "Visa Application",
+        "Interview Prep",
+        "Document Checklist",
+        "Embassy Support",
+      ],
     },
     {
       icon: Home,
       title: "Accommodation",
-      description: "Safe and comfortable accommodation arrangements near your university campus.",
-      features: ["Hostel Booking", "Shared Apartments", "Local Connections", "Safety Assured"]
+      description:
+        "Safe and comfortable accommodation arrangements near your university campus.",
+      features: [
+        "Hostel Booking",
+        "Shared Apartments",
+        "Local Connections",
+        "Safety Assured",
+      ],
     },
     {
       icon: CreditCard,
       title: "Financial Guidance",
-      description: "Complete support for education loans, forex, and financial planning for your studies abroad.",
-      features: ["Education Loans", "Forex Services", "Bank Account Opening", "Financial Planning"]
+      description:
+        "Complete support for education loans, forex, and financial planning for your studies abroad.",
+      features: [
+        "Education Loans",
+        "Forex Services",
+        "Bank Account Opening",
+        "Financial Planning",
+      ],
     },
     {
       icon: Headphones,
       title: "24/7 Student Support",
-      description: "Round-the-clock support for students and parents throughout the entire journey.",
-      features: ["Emergency Support", "Academic Guidance", "Parent Updates", "Regular Check-ins"]
-    }
+      description:
+        "Round-the-clock support for students and parents throughout the entire journey.",
+      features: [
+        "Emergency Support",
+        "Academic Guidance",
+        "Parent Updates",
+        "Regular Check-ins",
+      ],
+    },
   ];
 
   const process = [
     {
       step: 1,
       title: "Free Counseling",
-      description: "Initial consultation to understand your goals and preferences",
-      icon: Users
+      description:
+        "Initial consultation to understand your goals and preferences",
+      icon: Users,
     },
     {
       step: 2,
       title: "University Selection",
-      description: "Choose from our partner universities based on your criteria",
-      icon: GraduationCap
+      description:
+        "Choose from our partner universities based on your criteria",
+      icon: GraduationCap,
     },
     {
       step: 3,
       title: "Application Process",
       description: "Complete application and documentation support",
-      icon: FileText
+      icon: FileText,
     },
     {
       step: 4,
       title: "Visa Processing",
       description: "End-to-end visa assistance and interview preparation",
-      icon: Plane
+      icon: Plane,
     },
     {
       step: 5,
       title: "Pre-Departure",
       description: "Orientation, accommodation, and travel arrangements",
-      icon: CheckCircle
-    }
+      icon: CheckCircle,
+    },
   ];
 
   return (
@@ -102,8 +140,9 @@ const ServicesSection = () => {
             Our <span className="text-blue-600">Services</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive support from application to graduation. We handle everything 
-            so you can focus on your studies and achieving your dreams.
+            Comprehensive support from application to graduation. We handle
+            everything so you can focus on your studies and achieving your
+            dreams.
           </p>
         </motion.div>
 
@@ -132,7 +171,10 @@ const ServicesSection = () => {
                   </p>
                   <div className="space-y-2">
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center justify-center space-x-2">
+                      <div
+                        key={idx}
+                        className="flex items-center justify-center space-x-2"
+                      >
                         <CheckCircle className="w-4 h-4 text-green-500" />
                         <span className="text-sm text-gray-700">{feature}</span>
                       </div>
@@ -156,7 +198,8 @@ const ServicesSection = () => {
               Our Simple 5-Step Process
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              From initial consultation to successful enrollment, we guide you through every step of your journey.
+              From initial consultation to successful enrollment, we guide you
+              through every step of your journey.
             </p>
           </div>
 
@@ -173,7 +216,7 @@ const ServicesSection = () => {
                 {index < process.length - 1 && (
                   <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transform -translate-x-1/2 z-0"></div>
                 )}
-                
+
                 <div className="relative z-10">
                   <div className="bg-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 shadow-lg border-4 border-blue-600">
                     <step.icon className="w-10 h-10 text-blue-600" />
@@ -201,8 +244,9 @@ const ServicesSection = () => {
               Ready to Start Your MBBS Journey?
             </h3>
             <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-              Join thousands of successful students who chose WhiteCoatAs for their medical education abroad. 
-              Get started with a free consultation today!
+              Join thousands of successful students who chose WhiteCoatAs for
+              their medical education abroad. Get started with a free
+              consultation today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
