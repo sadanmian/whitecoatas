@@ -119,12 +119,63 @@ const AboutSection = () => {
             </div>
           </motion.div>
 
-          {/* Right Content */}
+          {/* Right Content - Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="relative"
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/images/medical-student-studying.jpg"
+                alt="Medical student studying with books and stethoscope"
+                className="w-full h-[500px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+            {/* Floating elements */}
+            <div className="absolute -top-4 -right-4 bg-white rounded-full p-4 shadow-lg">
+              <div className="text-2xl">🩺</div>
+            </div>
+            <div className="absolute -bottom-4 -left-4 bg-white rounded-full p-4 shadow-lg">
+              <div className="text-2xl">📚</div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Mission, Vision, Values Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+          {/* Left Content - Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="relative order-2 lg:order-1"
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/images/medical-team.jpg"
+                alt="Medical professionals and students"
+                className="w-full h-[400px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+            {/* Floating elements */}
+            <div className="absolute -top-4 -right-4 bg-white rounded-full p-4 shadow-lg">
+              <div className="text-2xl">🎓</div>
+            </div>
+            <div className="absolute -bottom-4 -left-4 bg-white rounded-full p-4 shadow-lg">
+              <div className="text-2xl">🌍</div>
+            </div>
+          </motion.div>
+
+          {/* Right Content - Mission, Vision, Values */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8 order-1 lg:order-2"
           >
             {values.map((value, index) => (
               <motion.div

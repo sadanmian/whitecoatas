@@ -104,10 +104,32 @@ const TestimonialsSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Student <span className="text-blue-300">Success Stories</span>
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
             Hear from our successful students who are now pursuing their medical
             dreams abroad. Their journey could be your inspiration!
           </p>
+
+          {/* Success Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-xl mx-auto"
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/images/students-graduation.jpg"
+                alt="Successful medical students at graduation"
+                className="w-full h-[250px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm font-medium">
+                  Dreams Achieved, Careers Built
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
 
         {/* Main Testimonial Display */}

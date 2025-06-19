@@ -129,10 +129,32 @@ const CountriesSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Study <span className="text-blue-600">Destinations</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Explore top destinations for MBBS abroad. Each country offers unique
             advantages and world-class medical education at affordable costs.
           </p>
+
+          {/* World Map Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-2xl mx-auto"
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/images/world-map-medical.jpg"
+                alt="World map showing global medical education opportunities"
+                className="w-full h-[300px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm font-medium">
+                  Medical Education Worldwide
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
 
         {/* Countries Grid */}

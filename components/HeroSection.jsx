@@ -19,7 +19,18 @@ const HeroSection = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-100" />
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-100 z-10"></div>
+        {/* Medical Education Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 left-10 text-6xl">🩺</div>
+          <div className="absolute top-20 right-20 text-4xl">📚</div>
+          <div className="absolute bottom-20 left-20 text-5xl">🎓</div>
+          <div className="absolute bottom-10 right-10 text-4xl">🌍</div>
+          <div className="absolute top-1/2 left-1/4 text-3xl">⚕️</div>
+          <div className="absolute top-1/3 right-1/3 text-4xl">🏥</div>
+        </div>
+      </div>
 
       {/* Animated background elements */}
       <div className="absolute inset-0">
@@ -45,7 +56,7 @@ const HeroSection = () => {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <div className="text-center">
           {/* Main heading */}
           <motion.div
@@ -53,12 +64,14 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-              Your Dream of{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                MBBS Abroad
-              </span>{" "}
-              Starts Here
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              <span className="block whitespace-nowrap">
+                Your Dream of{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  MBBS Abroad
+                </span>{" "}
+                Starts Here
+              </span>
             </h1>
           </motion.div>
 
