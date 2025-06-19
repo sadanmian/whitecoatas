@@ -45,15 +45,15 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-[0.9]"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight whitespace-nowrap"
         >
-          <span className="block text-gray-900">
+          <span className="text-gray-900">
             Study{" "}
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               MBBS
-            </span>
+            </span>{" "}
+            Abroad
           </span>
-          <span className="block text-gray-900">Abroad</span>
         </motion.h1>
 
         {/* Clean subtitle */}

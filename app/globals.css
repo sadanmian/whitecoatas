@@ -8,8 +8,12 @@
   --header-height: 96px;
 }
 
+/* Apply Varela Round to the entire application */
+* {
+  font-family: "Varela Round", sans-serif !important;
+}
+
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);

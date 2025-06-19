@@ -1,16 +1,4 @@
-import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-});
 
 export const metadata = {
   title: "WhiteCoatAs - Your Gateway to Global Medical Education",
@@ -49,11 +37,22 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+          rel="stylesheet"
+        />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
-        className={`${inter.variable} ${poppins.variable} font-sans antialiased`}
+        className="antialiased"
+        style={{ fontFamily: "'Varela Round', sans-serif" }}
       >
         {children}
       </body>
