@@ -1,37 +1,203 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WhiteCoatAs - Your Gateway to Global Medical Education
 
-## Getting Started
+A modern, responsive website for MBBS abroad admission consultancy, built with Next.js 15, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+## ✨ Features
+
+- **Modern Design**: Clean, professional design inspired by leading medical education consultancy websites
+- **Responsive Layout**: Fully responsive design that works perfectly on all devices
+- **Smooth Animations**: Beautiful animations using Framer Motion for enhanced user experience
+- **Interactive Components**: Dynamic sections including testimonials carousel, FAQ accordion, and more
+- **SEO Optimized**: Comprehensive meta tags, structured data, and optimal performance
+- **Contact Forms**: Multiple contact points with WhatsApp integration
+- **Country Showcases**: Detailed information about study destinations
+- **University Listings**: Comprehensive university database with filtering options
+
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Styling**: Tailwind CSS v4
+- **UI Components**: shadcn/ui
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Fonts**: Inter & Poppins from Google Fonts
+- **Build Tool**: Turbopack (Next.js Turbopack)
+
+## 📋 Sections
+
+1. **Header** - Navigation with contact info and mobile-responsive menu
+2. **Hero Section** - Compelling headline with statistics and CTAs
+3. **About Section** - Company mission, vision, and key features
+4. **Countries Section** - Study destinations with cost breakdowns
+5. **Universities Section** - Partner universities with filtering options
+6. **Services Section** - Complete service offerings and process flow
+7. **Testimonials** - Student success stories with carousel
+8. **FAQ Section** - Common questions with expandable answers
+9. **Contact Section** - Multiple contact forms and information
+10. **Footer** - Comprehensive links and social media integration
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or pnpm
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd whitecoatas
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+pnpm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
 # or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📦 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+whitecoatas/
+├── app/
+│   ├── globals.css
+│   ├── layout.js
+│   ├── page.js
+│   ├── not-found.js
+│   └── manifest.js
+├── components/
+│   ├── ui/
+│   │   ├── button.jsx
+│   │   ├── card.jsx
+│   │   ├── input.jsx
+│   │   ├── textarea.jsx
+│   │   └── badge.jsx
+│   ├── Header.jsx
+│   ├── HeroSection.jsx
+│   ├── AboutSection.jsx
+│   ├── CountriesSection.jsx
+│   ├── UniversitiesSection.jsx
+│   ├── ServicesSection.jsx
+│   ├── TestimonialsSection.jsx
+│   ├── FAQSection.jsx
+│   ├── ContactSection.jsx
+│   ├── Footer.jsx
+│   └── WhatsAppButton.jsx
+├── lib/
+│   └── utils.js
+└── public/
+    └── robots.txt
+```
 
-## Learn More
+## 🎯 Key Components
 
-To learn more about Next.js, take a look at the following resources:
+### Header
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Sticky navigation with contact information
+- Mobile-responsive hamburger menu
+- Smooth scrolling navigation links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Hero Section
 
-## Deploy on Vercel
+- Animated headline and statistics
+- Call-to-action buttons
+- Background animations
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Countries Section
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# whitecoatas
+- Interactive country cards
+- Cost breakdown information
+- University count per country
+
+### Universities Section
+
+- Filterable university listings
+- Detailed university information
+- Rating and accreditation badges
+
+### Contact Features
+
+- Multi-step contact forms
+- WhatsApp floating button
+- Phone and email integration
+
+## 🔧 Customization
+
+### Colors
+
+The website uses a blue-purple color scheme. To customize:
+
+1. Update Tailwind config in `tailwind.config.js`
+2. Modify CSS custom properties in `globals.css`
+3. Update component color classes
+
+### Content
+
+All content is easily customizable by editing the respective component files:
+
+- University data in `UniversitiesSection.jsx`
+- Country information in `CountriesSection.jsx`
+- FAQ content in `FAQSection.jsx`
+- Testimonials in `TestimonialsSection.jsx`
+
+### Contact Information
+
+Update contact details in:
+
+- `Header.jsx`
+- `ContactSection.jsx`
+- `Footer.jsx`
+- `WhatsAppButton.jsx`
+
+## 📱 Responsive Design
+
+The website is fully responsive with breakpoints:
+
+- Mobile: 0-640px
+- Tablet: 641-768px
+- Desktop: 769px+
+
+## 🚀 Performance
+
+- **Next.js 15** with App Router for optimal performance
+- **Turbopack** for faster builds
+- **Optimized images** and lazy loading
+- **Code splitting** for faster page loads
+- **SEO optimized** with proper meta tags
+
+## 📈 SEO Features
+
+- Comprehensive meta tags
+- Open Graph integration
+- Twitter Card support
+- Structured data markup
+- Sitemap generation
+- Robots.txt configuration
+
+## 🔮 Future Enhancements
+
+- Blog section for SEO content
+- Student portal integration
+- Online application system
+- Live chat functionality
+- Multilingual support
+- Admin dashboard
+
+---
+
+**WhiteCoatAs** - Making medical education dreams come true worldwide! 🩺🌍
