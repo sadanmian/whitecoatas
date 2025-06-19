@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Modern gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50"></div>
@@ -65,13 +65,13 @@ const HeroSection = () => {
       </div>
 
       {/* Main content - Simplified and Centered */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col justify-center min-h-screen py-8">
         {/* Main headline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight"
         >
           <span className="block text-gray-900">
             Study{" "}
@@ -79,7 +79,7 @@ const HeroSection = () => {
               MBBS
             </span>
           </span>
-          <span className="block text-gray-900 mt-2">Abroad</span>
+          <span className="block text-gray-900 mt-1 sm:mt-2">Abroad</span>
         </motion.h1>
 
         {/* Simplified subtitle */}
@@ -87,7 +87,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto"
+          className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-2xl mx-auto"
         >
           Your trusted partner for quality medical education worldwide
         </motion.p>
@@ -101,10 +101,10 @@ const HeroSection = () => {
         >
           <Button
             size="lg"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-6 text-xl font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 sm:px-10 py-4 sm:py-6 text-lg sm:text-xl font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
           >
             Start Your Journey
-            <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 sm:ml-3 w-5 sm:w-6 h-5 sm:h-6 group-hover:translate-x-1 transition-transform" />
           </Button>
         </motion.div>
       </div>
