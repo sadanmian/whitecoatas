@@ -9,90 +9,65 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/images/doctor-with-diploma.jpg')",
+      }}
     >
-      {/* Modern gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50"></div>
+      {/* Modern minimal overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/90 to-blue-50/95 backdrop-blur-[1px]"></div>
 
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <motion.div
-          animate={{
-            scale: [1, 1.1, 1],
-            rotate: [0, 5, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-blue-200/30 to-purple-200/30 rounded-full blur-xl"
-        />
-        <motion.div
-          animate={{
-            scale: [1.1, 1, 1.1],
-            rotate: [0, -5, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute bottom-20 left-10 w-40 h-40 bg-gradient-to-br from-purple-200/30 to-pink-200/30 rounded-full blur-xl"
-        />
-        <motion.div
-          animate={{
-            y: [-20, 20, -20],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-1/3 left-1/4 w-6 h-6 bg-blue-400/20 rounded-full"
-        />
-        <motion.div
-          animate={{
-            y: [20, -20, 20],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-2/3 right-1/3 w-4 h-4 bg-purple-400/20 rounded-full"
-        />
+      {/* Clean geometric elements */}
+      <div className="absolute inset-0 z-10">
+        <div className="absolute top-20 right-20 w-2 h-2 bg-blue-500/30 rounded-full"></div>
+        <div className="absolute bottom-32 left-16 w-1 h-1 bg-purple-500/40 rounded-full"></div>
+        <div className="absolute top-1/3 left-1/5 w-1.5 h-1.5 bg-blue-400/25 rounded-full"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-purple-400/30 rounded-full"></div>
       </div>
 
-      {/* Main content - Simplified and Centered */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col justify-center min-h-screen py-8">
-        {/* Main headline */}
+      {/* Main content */}
+      <div className="relative z-20 max-w-5xl mx-auto px-6 sm:px-8 text-center">
+        {/* Modern badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-md border border-gray-200/50 rounded-full px-6 py-3 mb-8 shadow-sm"
+        >
+          <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+          <span className="text-sm font-medium text-gray-700">
+            Medical Education Excellence
+          </span>
+        </motion.div>
+
+        {/* Clean headline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight whitespace-nowrap"
         >
-          <span className="block text-gray-900">
+          <span className="text-gray-900">
             Study{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               MBBS
-            </span>
+            </span>{" "}
+            Abroad
           </span>
-          <span className="block text-gray-900 mt-1 sm:mt-2">Abroad</span>
         </motion.h1>
 
-        {/* Simplified subtitle */}
+        {/* Clean subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-2xl mx-auto"
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-xl md:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto font-light"
         >
-          Your trusted partner for quality medical education worldwide
+          Transform your medical career with world-class education and expert
+          guidance
         </motion.p>
 
-        {/* Single CTA button */}
+        {/* Modern CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -101,25 +76,25 @@ const HeroSection = () => {
         >
           <Button
             size="lg"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 sm:px-10 py-4 sm:py-6 text-lg sm:text-xl font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-12 py-6 text-lg font-medium rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group border-0"
           >
-            Start Your Journey
-            <ArrowRight className="ml-2 sm:ml-3 w-5 sm:w-6 h-5 sm:h-6 group-hover:translate-x-1 transition-transform" />
+            Get Started Today
+            <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Minimal scroll indicator */}
       <motion.div
-        animate={{ y: [0, 8, 0] }}
+        animate={{ y: [0, 6, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30"
       >
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center opacity-60">
+        <div className="w-5 h-8 border border-gray-400/60 rounded-full flex justify-center">
           <motion.div
-            animate={{ y: [0, 12, 0] }}
+            animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-1 h-3 bg-gray-400 rounded-full mt-2"
+            className="w-0.5 h-2 bg-gray-500/60 rounded-full mt-1.5"
           />
         </div>
       </motion.div>
