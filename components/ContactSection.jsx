@@ -43,7 +43,7 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 98765 43210", "+91 87654 32109"],
+      details: ["+91 94566 95915"],
       description: "Speak with our counselors",
       color: "text-green-600",
       bgColor: "bg-green-50",
@@ -51,7 +51,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@whitecoatas.com", "admissions@whitecoatas.com"],
+      details: ["whitecoatabroadstudies@gmail.com"],
       description: "Get detailed information",
       color: "text-blue-600",
       bgColor: "bg-blue-50",
@@ -328,7 +328,7 @@ const ContactSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
-              href="tel:+919876543210"
+              href="tel:+919456695915"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200 flex items-center justify-center space-x-2"
@@ -337,7 +337,9 @@ const ContactSection = () => {
               <span>Call Now</span>
             </motion.a>
             <motion.a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919456695915"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors duration-200 flex items-center justify-center space-x-2"
