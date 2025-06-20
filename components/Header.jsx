@@ -38,13 +38,32 @@ const Header = () => {
       <div className="bg-blue-900 text-white py-2 px-4 text-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
+            {/* Desktop view - show text */}
+            <div className="hidden sm:flex items-center space-x-2">
               <Phone className="w-4 h-4" />
-              <span>+91 98765 43210</span>
+              <span>+91 94566 95915</span>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="hidden sm:flex items-center space-x-2">
               <Mail className="w-4 h-4" />
-              <span>info@whitecoatas.com</span>
+              <span>whitecoatabroadstudies@gmail.com</span>
+            </div>
+
+            {/* Mobile view - show icons only */}
+            <div className="flex sm:hidden items-center space-x-3">
+              <a
+                href="tel:+919456695915"
+                className="flex items-center justify-center w-6 h-6 hover:bg-blue-800 rounded transition-colors duration-200"
+                title="Call us"
+              >
+                <Phone className="w-4 h-4" />
+              </a>
+              <a
+                href="mailto:whitecoatabroadstudies@gmail.com"
+                className="flex items-center justify-center w-6 h-6 hover:bg-blue-800 rounded transition-colors duration-200"
+                title="Email us"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
             </div>
           </div>
           <div className="hidden md:block">
