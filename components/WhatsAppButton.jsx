@@ -33,7 +33,7 @@ const WhatsAppButton = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "919876543210"; // Replace with actual WhatsApp number
+    const phoneNumber = "919456695915"; // Replace with actual WhatsApp number
     const message =
       "Hi! I'm interested in MBBS abroad programs. Please provide more information.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
