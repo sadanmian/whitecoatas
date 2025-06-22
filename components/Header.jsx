@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,12 +79,27 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <motion.h1
-              className="text-2xl font-bold text-blue-900"
-              whileHover={{ scale: 1.05 }}
+            <Link
+              href="/"
+              onClick={() => {
+                // Scroll to top when logo is clicked
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
             >
-              WhiteCoatAs
-            </motion.h1>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center cursor-pointer"
+              >
+                <Image
+                  src="/images/logo.png"
+                  alt="WhiteCoat Abroad Studies"
+                  width={50}
+                  height={20}
+                  style={{ height: "auto" }}
+                  priority
+                />
+              </motion.div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -98,7 +115,6 @@ const Header = () => {
                 {item.name}
               </motion.a>
             ))}
-            <Button className="bg-blue-600 hover:bg-blue-700">Apply Now</Button>
           </div>
 
           {/* Mobile menu button */}
