@@ -13,7 +13,27 @@ import {
   BookOpen,
   ChevronRight,
   Star,
+  Download,
 } from "lucide-react";
+
+const russiaImages = [
+  "/russia/bashkir-state-medical-university.jpeg",
+  "/russia/chechen-state-medical-university.jpeg",
+  "/russia/crima-federal-university.jpeg",
+  "/russia/ingush-state-medical-university.jpeg",
+  "/russia/kabardino-balkarian-medical-university.jpeg",
+  "/russia/kemerovo-state-medical-university.jpeg",
+  "/russia/north-caucasian-state-medical-university.jpeg",
+  "/russia/north-ossetian-state-medical-university.jpeg",
+  "/russia/northern-state-medical-university.jpeg",
+  "/russia/omsk-state-medical-university.jpeg",
+  "/russia/orenburg-state-medical-university.jpeg",
+  "/russia/perm-state-medical-university.jpeg",
+  "/russia/pskov-state-medical-university.jpeg",
+  "/russia/rostov-state-medical-university.jpeg",
+  "/russia/sevastopol-state-medical-university.jpeg",
+  "/russia/tver-state-medical-university.jpeg",
+];
 
 const UniversitiesSection = () => {
   const [selectedCountry, setSelectedCountry] = useState("All");
@@ -216,135 +236,173 @@ const UniversitiesSection = () => {
 
         {/* Universities Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredUniversities.map((university, index) => (
-            <motion.div
-              key={university.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="group"
-            >
-              <Card className="h-full hover:shadow-2xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
-                {/* University Header */}
-                <div
-                  className={`bg-gradient-to-r ${university.color} p-6 text-white relative overflow-hidden`}
-                >
-                  <div className="absolute top-0 right-0 opacity-20 text-6xl">
-                    {university.image}
-                  </div>
-                  <div className="relative z-10">
-                    <div className="flex items-center justify-between mb-2">
-                      <Badge
-                        variant="secondary"
-                        className="bg-white/20 text-white"
-                      >
-                        {university.country}
-                      </Badge>
-                      <div className="flex items-center space-x-1">
-                        <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        <span className="text-sm font-semibold">
-                          {university.rating}
-                        </span>
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold mb-2 line-clamp-2">
-                      {university.name}
-                    </h3>
-                    <div className="flex items-center space-x-2 text-sm opacity-90">
-                      <MapPin className="w-4 h-4" />
-                      <span>{university.city}</span>
-                      <span>•</span>
-                      <span>Est. {university.established}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <CardContent className="p-6">
-                  {/* Key Information */}
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <DollarSign className="w-4 h-4 text-green-600" />
-                        <span className="text-sm text-gray-600">
-                          Tuition Fee
-                        </span>
-                      </div>
-                      <span className="font-semibold text-gray-900">
-                        {university.tuitionFee}
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <Users className="w-4 h-4 text-blue-600" />
-                        <span className="text-sm text-gray-600">Students</span>
-                      </div>
-                      <span className="font-semibold text-gray-900">
-                        {university.students}
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <Award className="w-4 h-4 text-purple-600" />
-                        <span className="text-sm text-gray-600">Ranking</span>
-                      </div>
-                      <span className="font-semibold text-gray-900 text-xs">
-                        {university.ranking}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Accreditation */}
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">
-                      Accreditation
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {university.accreditation.map((acc, idx) => (
-                        <Badge
-                          key={idx}
-                          variant="outline"
-                          className="text-xs bg-green-50 text-green-700 border-green-200"
-                        >
-                          {acc}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Highlights */}
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">
-                      Key Highlights
-                    </h4>
-                    <ul className="space-y-1">
-                      {university.highlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-center space-x-2">
-                          <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                          <span className="text-xs text-gray-600">
-                            {highlight}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Learn More Button */}
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold text-sm transition-colors duration-200 flex items-center justify-center space-x-2 group"
+          {selectedCountry !== "Russia" &&
+            filteredUniversities.map((university, index) => (
+              <motion.div
+                key={university.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -10 }}
+                className="group"
+              >
+                <Card className="h-full hover:shadow-2xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
+                  {/* University Header */}
+                  <div
+                    className={`bg-gradient-to-r ${university.color} p-6 text-white relative overflow-hidden`}
                   >
-                    <span>Learn More</span>
-                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </motion.button>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                    <div className="absolute top-0 right-0 opacity-20 text-6xl">
+                      {university.image}
+                    </div>
+                    <div className="relative z-10">
+                      <div className="flex items-center justify-between mb-2">
+                        <Badge
+                          variant="secondary"
+                          className="bg-white/20 text-white"
+                        >
+                          {university.country}
+                        </Badge>
+                        <div className="flex items-center space-x-1">
+                          <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                          <span className="text-sm font-semibold">
+                            {university.rating}
+                          </span>
+                        </div>
+                      </div>
+                      <h3 className="text-xl font-bold mb-2 line-clamp-2">
+                        {university.name}
+                      </h3>
+                      <div className="flex items-center space-x-2 text-sm opacity-90">
+                        <MapPin className="w-4 h-4" />
+                        <span>{university.city}</span>
+                        <span>•</span>
+                        <span>Est. {university.established}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <CardContent className="p-6">
+                    {/* Key Information */}
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <DollarSign className="w-4 h-4 text-green-600" />
+                          <span className="text-sm text-gray-600">
+                            Tuition Fee
+                          </span>
+                        </div>
+                        <span className="font-semibold text-gray-900">
+                          {university.tuitionFee}
+                        </span>
+                      </div>
+
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <Users className="w-4 h-4 text-blue-600" />
+                          <span className="text-sm text-gray-600">
+                            Students
+                          </span>
+                        </div>
+                        <span className="font-semibold text-gray-900">
+                          {university.students}
+                        </span>
+                      </div>
+
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <Award className="w-4 h-4 text-purple-600" />
+                          <span className="text-sm text-gray-600">Ranking</span>
+                        </div>
+                        <span className="font-semibold text-gray-900 text-xs">
+                          {university.ranking}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Accreditation */}
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-2 text-sm">
+                        Accreditation
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {university.accreditation.map((acc, idx) => (
+                          <Badge
+                            key={idx}
+                            variant="outline"
+                            className="text-xs bg-green-50 text-green-700 border-green-200"
+                          >
+                            {acc}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Highlights */}
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-2 text-sm">
+                        Key Highlights
+                      </h4>
+                      <ul className="space-y-1">
+                        {university.highlights.map((highlight, idx) => (
+                          <li key={idx} className="flex items-center space-x-2">
+                            <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+                            <span className="text-xs text-gray-600">
+                              {highlight}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Learn More Button */}
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold text-sm transition-colors duration-200 flex items-center justify-center space-x-2 group"
+                    >
+                      <span>Learn More</span>
+                      <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </motion.button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
         </div>
+
+        {/* Russia Images */}
+        {selectedCountry === "Russia" && (
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {russiaImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group relative overflow-hidden rounded-xl shadow-lg"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <img
+                    src={image}
+                    alt={`Glimpse of Russia ${index + 1}`}
+                    className="w-full h-full object-cover transition-transform duration-300"
+                  />
+                  <a
+                    href={image}
+                    download
+                    className="absolute top-4 left-4 z-10 bg-white/80 text-gray-900 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white hover:scale-110"
+                  >
+                    <Download className="w-5 h-5" />
+                  </a>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
 
         {/* Statistics */}
         <motion.div
