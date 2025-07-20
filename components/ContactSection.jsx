@@ -59,7 +59,7 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["123 Education Hub", "New Delhi, India - 110001"],
+      details: ["Building No. 53, NFC bharat Nagar,", "Okhla, New Delhi"],
       description: "Meet us in person",
       color: "text-purple-600",
       bgColor: "bg-purple-50",
