@@ -236,8 +236,9 @@ const UniversitiesSection = () => {
 
         {/* Universities Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {selectedCountry !== "Russia" &&
-            filteredUniversities.map((university, index) => (
+          {filteredUniversities
+            .filter((uni) => uni.country !== "Russia")
+            .map((university, index) => (
               <motion.div
                 key={university.id}
                 initial={{ opacity: 0, y: 50 }}
@@ -370,7 +371,7 @@ const UniversitiesSection = () => {
         </div>
 
         {/* Russia Images */}
-        {selectedCountry === "Russia" && (
+        {(selectedCountry === "Russia" || selectedCountry === "All") && (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
