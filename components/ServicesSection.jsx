@@ -276,13 +276,15 @@ const ServicesSection = () => {
               >
                 Book Free Consultation
               </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
-              >
-                Download Brochure
-              </motion.button>
+              <a href="/brochure.pdf" target="_blank" rel="noopener noreferrer">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
+                >
+                  Download Brochure
+                </motion.button>
+              </a>
             </div>
           </div>
         </motion.div>
