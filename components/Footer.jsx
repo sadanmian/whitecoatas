@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   Mail,
   Phone,
@@ -238,12 +239,12 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex space-x-6 text-sm">
-              <a
-                href="#"
+              <Link
+                href="/privacy-policy"
                 className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
               >
                 Privacy Policy
-              </a>
+              </Link>
               <a
                 href="#"
                 className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
