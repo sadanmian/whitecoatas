@@ -3,15 +3,78 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Custom properties for layout */
+/* ========================================
+   DESIGN SYSTEM: Deep Teal + Warm Gold
+   Typography: Outfit / Crimson Pro / DM Mono
+   ======================================== */
+
 :root {
-  --header-height: 96px;
+  --header-height: 100px;
+  --radius: 0.625rem;
+
+  /* Typography — runtime CSS variables */
+  --font-heading: var(--font-outfit), "Outfit", sans-serif;
+  --font-body: var(--font-crimson-pro), "Crimson Pro", serif;
+  --font-mono-custom: var(--font-dm-mono), "DM Mono", monospace;
+
+  /* Light Mode — Deep Teal + Warm Gold */
+  --background: oklch(0.985 0.002 90);
+  --foreground: oklch(0.18 0.02 240);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 240);
+  --primary: oklch(0.45 0.12 195);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.95 0.01 195);
+  --secondary-foreground: oklch(0.22 0.02 240);
+  --muted: oklch(0.94 0.005 90);
+  --muted-foreground: oklch(0.5 0.01 240);
+  --accent: oklch(0.72 0.15 75);
+  --accent-foreground: oklch(0.18 0.02 240);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.9 0.01 195);
+  --input: oklch(0.9 0.01 195);
+  --ring: oklch(0.45 0.12 195);
+
+  /* Chart colors */
+  --chart-1: oklch(0.45 0.12 195);
+  --chart-2: oklch(0.72 0.15 75);
+  --chart-3: oklch(0.55 0.14 160);
+  --chart-4: oklch(0.65 0.12 45);
+  --chart-5: oklch(0.5 0.16 280);
 }
 
-/* Apply Varela Round to the entire application */
-* {
-  font-family: "Varela Round", sans-serif !important;
+.dark {
+  --background: oklch(0.14 0.015 240);
+  --foreground: oklch(0.93 0.005 90);
+  --card: oklch(0.19 0.015 240);
+  --card-foreground: oklch(0.93 0.005 90);
+  --popover: oklch(0.19 0.015 240);
+  --popover-foreground: oklch(0.93 0.005 90);
+  --primary: oklch(0.6 0.14 195);
+  --primary-foreground: oklch(0.12 0.015 240);
+  --secondary: oklch(0.24 0.015 240);
+  --secondary-foreground: oklch(0.93 0.005 90);
+  --muted: oklch(0.25 0.01 240);
+  --muted-foreground: oklch(0.65 0.01 240);
+  --accent: oklch(0.75 0.14 75);
+  --accent-foreground: oklch(0.14 0.015 240);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(0.28 0.015 240);
+  --input: oklch(0.28 0.015 240);
+  --ring: oklch(0.6 0.14 195);
+
+  --chart-1: oklch(0.6 0.14 195);
+  --chart-2: oklch(0.75 0.14 75);
+  --chart-3: oklch(0.65 0.14 160);
+  --chart-4: oklch(0.72 0.12 45);
+  --chart-5: oklch(0.6 0.16 280);
 }
+
+/* ========================================
+   TAILWIND THEME INLINE
+   ======================================== */
 
 @theme inline {
   --radius-md: calc(var(--radius) - 2px);
@@ -40,100 +103,102 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
 
-:root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
-
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
+/* ========================================
+   BASE STYLES
+   ======================================== */
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    transition: background-color 0.3s ease, color 0.2s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply tracking-tight;
   }
 }
 
-/* Custom styles for better UX */
+/* ========================================
+   FONT UTILITY CLASSES
+   ======================================== */
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono {
+  font-family: var(--font-mono-custom);
+}
+
+/* ========================================
+   GLOBAL RESETS & UTILITIES
+   ======================================== */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Line clamp utility for text truncation */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100vw;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Headings word wrap */
+h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ========================================
+   CUSTOM SCROLLBAR (respects theme)
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* ========================================
+   LINE CLAMP UTILITIES
+   ======================================== */
+
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -148,75 +213,60 @@ html {
   overflow: hidden;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
+/* ========================================
+   BACKGROUND PATTERNS
+   ======================================== */
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #cbd5e0;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #a0aec0;
-}
-
-/* Background patterns */
 .bg-pattern {
   background-image: radial-gradient(
       circle at 20px 80px,
-      #3b82f6 2px,
+      oklch(0.45 0.12 195 / 0.07) 2px,
       transparent 2px
     ),
-    radial-gradient(circle at 80px 20px, #8b5cf6 2px, transparent 2px);
+    radial-gradient(
+      circle at 80px 20px,
+      oklch(0.72 0.15 75 / 0.05) 2px,
+      transparent 2px
+    );
   background-size: 100px 100px;
-  opacity: 0.05;
 }
 
-/* Responsive overflow fixes */
-* {
-  box-sizing: border-box;
+.bg-grid {
+  background-image: linear-gradient(
+      var(--border) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      var(--border) 1px,
+      transparent 1px
+    );
+  background-size: 60px 60px;
+  opacity: 0.4;
 }
 
-html,
-body {
-  overflow-x: hidden;
+.bg-mesh {
+  background:
+    radial-gradient(at 40% 20%, oklch(0.45 0.12 195 / 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, oklch(0.72 0.15 75 / 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, oklch(0.45 0.12 195 / 0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, oklch(0.72 0.15 75 / 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, oklch(0.45 0.12 195 / 0.12) 0px, transparent 50%);
 }
 
-body {
-  max-width: 100vw;
+.dark .bg-mesh {
+  background:
+    radial-gradient(at 40% 20%, oklch(0.6 0.14 195 / 0.12) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, oklch(0.75 0.14 75 / 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, oklch(0.6 0.14 195 / 0.06) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, oklch(0.75 0.14 75 / 0.04) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, oklch(0.6 0.14 195 / 0.1) 0px, transparent 50%);
 }
 
-/* Ensure containers don't overflow */
-.container {
-  max-width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
+/* ========================================
+   RESPONSIVE OVERFLOW FIXES
+   ======================================== */
 
-/* Fix for text that might overflow */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  word-wrap: break-word;
-  hyphens: auto;
-}
-
-/* Responsive images */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Prevent horizontal scroll on mobile */
 @media (max-width: 640px) {
   .whitespace-nowrap {
     white-space: normal !important;
@@ -225,4 +275,51 @@ img {
   .overflow-x-auto {
     -webkit-overflow-scrolling: touch;
   }
+}
+
+/* ========================================
+   PROSE STYLING FOR BLOG
+   ======================================== */
+
+.prose-custom h2 {
+  @apply text-2xl font-bold mt-10 mb-4;
+  font-family: var(--font-heading);
+}
+
+.prose-custom h3 {
+  @apply text-xl font-semibold mt-8 mb-3;
+  font-family: var(--font-heading);
+}
+
+.prose-custom p {
+  @apply mb-4 leading-relaxed;
+}
+
+.prose-custom ul, .prose-custom ol {
+  @apply mb-4 pl-6;
+}
+
+.prose-custom li {
+  @apply mb-2;
+}
+
+.prose-custom table {
+  @apply w-full mb-6 text-sm;
+}
+
+.prose-custom th {
+  @apply text-left p-3 bg-secondary font-semibold border-b border-border;
+  font-family: var(--font-heading);
+}
+
+.prose-custom td {
+  @apply p-3 border-b border-border;
+}
+
+.prose-custom strong {
+  @apply font-semibold;
+}
+
+.prose-custom blockquote {
+  @apply border-l-4 border-primary pl-4 my-6 italic text-muted-foreground;
 }
