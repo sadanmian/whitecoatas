@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -143,6 +144,26 @@ const UniversitiesSection = () => {
       ],
       image: "💻",
       color: "from-purple-500 to-pink-500",
+    },
+    {
+      id: 7,
+      name: "Fergana Medical Institute of Public Health",
+      slug: "fergana-medical-institute",
+      country: "Uzbekistan",
+      city: "Fergana",
+      established: 1991,
+      tuitionFee: "$4,650/year (3rd-6th year)",
+      ranking: "Government Medical Institute",
+      accreditation: ["WHO", "WDOMS", "NMC"],
+      students: "Data available on request",
+      rating: 4.7,
+      highlights: [
+        "English Medium MBBS Program",
+        "19 Academic Departments",
+        "FMGE/NExT Coaching Support",
+      ],
+      image: "🩺",
+      color: "from-indigo-500 to-blue-600",
     },
     {
       id: 6,
@@ -356,14 +377,28 @@ const UniversitiesSection = () => {
                     </div>
 
                     {/* Learn More Button */}
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold text-sm transition-colors duration-200 flex items-center justify-center space-x-2 group"
-                    >
-                      <span>Learn More</span>
-                      <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </motion.button>
+                    {university.slug ? (
+                      <Link href={`/universities/${university.slug}`} className="block">
+                        <motion.span
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold text-sm transition-colors duration-200 flex items-center justify-center space-x-2 group"
+                        >
+                          <span>Learn More</span>
+                          <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </motion.span>
+                      </Link>
+                    ) : (
+                      <motion.button
+                        type="button"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold text-sm transition-colors duration-200 flex items-center justify-center space-x-2 group"
+                      >
+                        <span>Learn More</span>
+                        <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </motion.button>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>
