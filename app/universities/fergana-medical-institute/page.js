@@ -170,7 +170,7 @@ export default function FerganaMedicalInstitutePage() {
               Study MBBS at Fergana Institute of Public Health
             </h1>
             <p className="text-blue-50 text-base md:text-lg max-w-4xl leading-relaxed">
-              Build your medical career at one of Uzbekistan's leading government
+              Build your medical career at one of Uzbekistan&apos;s leading government
               medical institutes. FMIPH offers a globally recognized
               English-medium MBBS/MD (General Medicine) program with modern
               infrastructure, experienced faculty, and extensive clinical
