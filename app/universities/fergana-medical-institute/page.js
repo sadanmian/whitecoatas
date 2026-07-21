@@ -163,19 +163,33 @@ export default function FerganaMedicalInstitutePage() {
           </Link>
 
           <section className="rounded-3xl bg-gradient-to-r from-blue-700 to-indigo-700 text-white p-8 md:p-12 mb-12 shadow-xl">
-            <p className="text-sm md:text-base font-semibold tracking-wide uppercase text-blue-100 mb-3">
-              Fergana Institute of Public Health (FMIPH), Uzbekistan
-            </p>
-            <h1 className="text-3xl md:text-5xl font-bold mb-5">
-              Study MBBS at Fergana Institute of Public Health
-            </h1>
-            <p className="text-blue-50 text-base md:text-lg max-w-4xl leading-relaxed">
-              Build your medical career at one of Uzbekistan&apos;s leading government
-              medical institutes. FMIPH offers a globally recognized
-              English-medium MBBS/MD (General Medicine) program with modern
-              infrastructure, experienced faculty, and extensive clinical
-              training.
-            </p>
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center">
+              <div>
+                <p className="text-sm md:text-base font-semibold tracking-wide uppercase text-blue-100 mb-3">
+                  Fergana Institute of Public Health (FMIPH), Uzbekistan
+                </p>
+                <h1 className="text-3xl md:text-5xl font-bold mb-5">
+                  Study MBBS at Fergana Institute of Public Health
+                </h1>
+                <p className="text-blue-50 text-base md:text-lg max-w-4xl leading-relaxed">
+                  Build your medical career at one of Uzbekistan&apos;s leading
+                  government medical institutes. FMIPH offers a globally
+                  recognized English-medium MBBS/MD (General Medicine) program
+                  with modern infrastructure, experienced faculty, and extensive
+                  clinical training.
+                </p>
+              </div>
+
+              <div className="mx-auto lg:mx-0 rounded-2xl bg-white p-3 shadow-2xl">
+                <Image
+                  src="/images/fmiph/fmiph-logo.png"
+                  alt="Fergana Medical Institute of Public Health logo"
+                  width={190}
+                  height={190}
+                  className="h-36 w-36 md:h-44 md:w-44 rounded-xl object-cover"
+                />
+              </div>
+            </div>
           </section>
 
           <section className="mb-12">

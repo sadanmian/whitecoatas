@@ -93,9 +93,9 @@ const Header = () => {
                 <Image
                   src="/images/logo.png"
                   alt="WhiteCoat Abroad Studies"
-                  width={50}
-                  height={20}
-                  style={{ height: "auto" }}
+                  width={84}
+                  height={84}
+                  className="h-auto w-16 md:w-20"
                   priority
                 />
               </motion.div>
