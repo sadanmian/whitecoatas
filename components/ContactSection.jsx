@@ -59,7 +59,7 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["Building No. 53, NFC bharat Nagar,", "Okhla, New Delhi"],
+      details: ["16th Floor, Esquare, Sector 96,", "Noida, Uttar Pradesh, India"],
       description: "Meet us in person",
       color: "text-purple-600",
       bgColor: "bg-purple-50",

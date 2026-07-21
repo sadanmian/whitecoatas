@@ -103,9 +103,9 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400 mt-1" />
                 <span className="text-gray-300">
-                  Building No. 53, NFC bharat Nagar,
+                  16th Floor, Esquare, Sector 96,
                   <br />
-                  Okhla, New Delhi
+                  Noida, Uttar Pradesh, India
                 </span>
               </div>
             </div>

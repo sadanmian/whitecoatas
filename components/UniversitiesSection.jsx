@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -162,6 +163,7 @@ const UniversitiesSection = () => {
         "19 Academic Departments",
         "FMGE/NExT Coaching Support",
       ],
+      logoImage: "/images/fmiph/fmiph-logo.png",
       image: "🩺",
       color: "from-indigo-500 to-blue-600",
     },
@@ -273,9 +275,21 @@ const UniversitiesSection = () => {
                   <div
                     className={`bg-gradient-to-r ${university.color} p-6 text-white relative overflow-hidden`}
                   >
-                    <div className="absolute top-0 right-0 opacity-20 text-6xl">
-                      {university.image}
-                    </div>
+                    {university.logoImage ? (
+                      <div className="absolute top-3 right-3 rounded-xl bg-white/90 p-1 shadow-md">
+                        <Image
+                          src={university.logoImage}
+                          alt={`${university.name} logo`}
+                          width={56}
+                          height={56}
+                          className="h-14 w-14 rounded-lg object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="absolute top-0 right-0 opacity-20 text-6xl">
+                        {university.image}
+                      </div>
+                    )}
                     <div className="relative z-10">
                       <div className="flex items-center justify-between mb-2">
                         <Badge
