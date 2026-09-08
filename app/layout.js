@@ -1,5 +1,12 @@
 import "./globals.css";
 
+// Redacto consent / cookie script, loaded on every page.
+const REDACTO_SCRIPT_SRC =
+  "https://cdn.redacto.tech/dist/redacto.min.js" +
+  "?domain=https://staging.whitecoatas.in" +
+  "&organisation_uuid=2423866f-8307-4278-8c36-e9c3ad2dbe1e" +
+  "&workspace_uuid=7b62fb27-24fb-46e0-86b4-74eff90558e9";
+
 export const metadata = {
   title: "WhiteCoatAs - Your Gateway to Global Medical Education",
   description:
@@ -47,6 +54,8 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
           rel="stylesheet"
         />
+        <link rel="preconnect" href="https://cdn.redacto.tech" />
+        <script async src={REDACTO_SCRIPT_SRC} />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
