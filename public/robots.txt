@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+# Unlisted internal page
+Disallow: /internal-support
+
 # Sitemap
 Sitemap: https://whitecoatas.com/sitemap.xml
 
